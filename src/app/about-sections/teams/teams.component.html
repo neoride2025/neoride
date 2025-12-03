@@ -1,0 +1,32 @@
+<section class="team-section">
+  <div class="container">
+    <h2>Our Team</h2>
+    <p class="team-subtitle">Meet the talented people behind our success</p>
+
+    <div class="row g-4">
+
+      <!-- Team Member 1 -->
+      <div class="col-lg-3 col-md-6" *ngFor="let member of myTeamMembers">
+        <div class="team-member">
+          <div class="team-member-image">
+            <img src="https://randomuser.me/api/portraits/men/{{member.image}}.jpg" alt="">
+          </div>
+          <h3 class="team-member-name">{{member.name}}</h3>
+          <p class="team-member-designation">{{member.designation}}</p>
+          <div class="team-member-social">
+            <a class="social-link">
+              <img src="assets/icons/linkedin.png" alt="">
+            </a>
+            <a class="social-link">
+              <img src="assets/icons/instagram.png" alt="">
+            </a>
+            <a class="social-link">
+              <img src="assets/icons/facebook.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

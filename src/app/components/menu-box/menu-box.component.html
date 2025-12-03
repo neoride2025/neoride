@@ -1,0 +1,19 @@
+<!-- backdrop -->
+<div class="menu-modal-backdrop z-2"></div>
+
+<!-- dialog -->
+<div class="menu-modal-dialog py-4 z-3">
+  <img src="assets/images/footer-logo.png" alt="" class="menu-pop-logo mx-auto mt-4 rounded-4" (click)="goTo('home')">
+  <!-- Menu Items List -->
+  <ul class="popup-menu-list text-center">
+    <li class="popup-menu-item" *ngFor="let menu of config.headerMenuOptions" (click)="goTo(menu.path)">
+      <div class="popup-item-label">{{menu.name}}</div>
+    </li>
+  </ul>
+
+  <!-- Download Button -->
+  <button class="popup-download-btn p-2 w-50 rounded-2 mx-auto mt-2" type="button">
+    Download Now
+  </button>
+
+</div>

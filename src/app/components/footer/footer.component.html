@@ -1,0 +1,30 @@
+<footer class="footer" [ngClass]="{'px-3': deviceType === 'mobile'}">
+    <div class="container">
+        <div class="row">
+            <!-- Logo Column -->
+            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                <img (click)="goTo('home')" src="assets/images/footer-logo.png" alt="NewRide" class="footer-logo rounded-2 mb-3 pointer" width="auto"
+                    height="50">
+                <p class="footer-tagline">Your smart ride companion for better fares...</p>
+            </div>
+
+            <div class="col-lg-3 col-6 mb-4 mb-lg-0" *ngFor="let menuOpt of menuOptions">
+                <h4 class="footer-title">{{menuOpt.title}}</h4>
+                <ul class="footer-menu">
+                    <li *ngFor="let link of menuOpt.links"><a (click)="goTo(link.path)">{{link.name}}</a></li>
+                </ul>
+            </div>
+
+            <!-- Social & Copyright -->
+            <div class="col-lg-3 col-md-6">
+                <h4 class="footer-title">Follow Us</h4>
+                <div class="social-icons">
+                    <a *ngFor="let link of socialLinks" target="_blank" [href]="link.path">
+                        <img [src]="link.icon" alt="" width="24" height="24">
+                    </a>
+                </div>
+                <p class="copyright">© 2025 NeoRide. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>

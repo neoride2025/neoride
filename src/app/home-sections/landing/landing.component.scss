@@ -1,0 +1,253 @@
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.05) 0%,
+    rgba(20, 184, 166, 0.05) 100%
+  );
+}
+
+.hero-content {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* highlight NeoRide brand inline */
+.brand {
+  color: var(--color-primary); /* brand green */
+  // background: linear-gradient(90deg,#00a86b1f 0%, #00a86b0a 100%);
+  padding: 0.08rem 0.45rem;
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+/* subtitle and CTA */
+.sub {
+  margin: 0 0 16px;
+  color: #495667;
+  font-size: 0.98rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-headline {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-text-main);
+  margin-bottom: 1.5rem;
+}
+
+.hero-brief {
+  font-size: 1.25rem;
+  color: var(--color-text-sub);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.btn-primary-cta {
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary-cta:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-large {
+  padding: 1.2rem 3rem;
+  font-size: 1.15rem;
+}
+
+/* Provider Animation Container */
+
+.providers-label {
+  font-size: 0.95rem;
+  color: var(--color-text-sub);
+  font-weight: 500;
+}
+
+.providers-animation-container {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.provider-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: var(--color-pure-white);
+  box-shadow: 0 4px 12px var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: providerPulse 3s ease-in-out infinite;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.provider-icon:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.provider-icon:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.provider-icon:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.provider-icon:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes providerPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 12px var(--shadow-sm);
+  }
+
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.2);
+  }
+}
+
+.best-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 28px;
+  height: 28px;
+  background: var(--color-accent);
+  color: var(--color-text-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.provider-icon.active .best-badge {
+  opacity: 1;
+  transform: scale(1);
+  animation: badgeBounce 0.6s ease;
+}
+
+@keyframes badgeBounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.comparison-arrows {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.arrow-path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: drawArrow 2s ease-in-out infinite;
+}
+
+.arrow-path:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+@keyframes drawArrow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero-visual {
+  position: relative;
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  filter: drop-shadow(0 20px 40px var(--shadow-lg));
+}
+
+/* Responsive Hero */
+@media (max-width: 991px) {
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .hero-brief {
+    font-size: 1.1rem;
+  }
+
+  .providers-animation-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-headline {
+    font-size: 2rem;
+  }
+
+  .provider-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* ============================================
+   IMPORT OTHER STYLE FILES
+   ============================================ */
+
+@import "assets/css/bootstrap.min.css";
+@import "assets/css/custom-styles.css"; // will contain custom css classes
+@import "assets/css/media-query.css"; // will contain media queries
+
+/* ============================================
+   COLOR VARIABLES - DO NOT ADD OTHER COLORS
+   ============================================ */
+:root {
+  --color-primary: #10b981;
+  --color-primary-rgb: 16, 185, 129;
+  --color-secondary: #14b8a6;
+  --color-accent: #a3e635;
+  --color-text-main: #1e293b;
+  --color-text-sub: #64748b;
+  --color-text-sub-rgb: 100, 116, 139;
+  --color-pure-white: #ffffff;
+
+  --header-height: 75px;
+  --privacy-header-height: 175px;
+}
+
+/* ============================================
+   FONTS
+   ============================================ */
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/fonts/roboto.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "roboto";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--color-text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.main-page-content {
+  margin-top: var(--header-height);
+}

@@ -1,0 +1,126 @@
+<!-- Form and Address Container -->
+<div class="row g-0 form-address-container" [ngClass]="{'rounded-0': deviceType !== 'desktop'}">
+  <!-- Contact form header -->
+  <div class="col-12 px-3">
+    <div class="contact-header pt-4 pb-3 text-center">
+      <h1 class="fw-bold">Get in Touch</h1>
+      <p>Fill out the form below and we'll get back to you as soon as possible</p>
+    </div>
+  </div>
+  <!-- Contact Form -->
+  <div class="col-lg-7">
+    <div class="contact-form-section">
+      <div class="d-flex">
+        <div class="conact-form-logo pe-3">
+          <img src="assets/logo-green.png" alt="" width="75" height="75">
+        </div>
+        <div class="form-header">
+          <h2>Send us a Message</h2>
+          <p>Fill out the form below and we'll get back to you as soon as possible</p>
+        </div>
+      </div>
+
+      <form id="contactForm">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="firstName" class="form-label">First Name *</label>
+            <input type="text" class="form-control" id="firstName" required [(ngModel)]="fname"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+
+          <div class="col-md-6">
+            <label for="lastName" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="lname"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email Address *</label>
+            <input type="email" class="form-control" id="email" required [(ngModel)]="email"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Phone Number *</label>
+            <input type="number" class="form-control" id="phone" required [(ngModel)]="phone"
+              [ngModelOptions]="{standalone: true}">
+          </div>
+
+          <div class="col-12">
+            <label for="service" class="form-label">Service Required</label>
+            <select class="form-select" id="service" [(ngModel)]="service" [ngModelOptions]="{standalone: true}">
+              <option value="" selected>Select a service</option>
+              <option value="home">Home Services</option>
+              <option value="maintenance">Maintenance</option>
+              <option value="consultation">Consultation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="message" class="form-label">Message *</label>
+            <textarea class="form-control" id="message" required [(ngModel)]="message"
+              [ngModelOptions]="{standalone: true}"></textarea>
+          </div>
+
+          <div class="col-12">
+            <!-- <button class="submit-btn2" (click)="submit()">Send Message</button> -->
+            <button class="submit-btn" id="submit-btn" (click)="handleSubmit()">
+              <div class="btn-text">Send Message</div>
+              <div class="spinner position-absolute left-0 right-0 top-0 bottom-0 m-auto"></div>
+              <div class="checkmark position-absolute left-0 right-0 top-0 bottom-0 m-auto"></div>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Address Details -->
+  <div class="col-lg-5 address-section-col position-relative">
+    <img *ngIf="deviceType === 'desktop'" src="assets/images/contact-4.png" alt=""
+      class="position-absolute left-0 bottom-0">
+    <img *ngIf="deviceType !== 'mobile'" src="assets/images/contact-3.png" alt=""
+      class="position-absolute right-0 bottom-0">
+    <div class="address-section">
+      <h2>Visit Us</h2>
+      <p>Come visit our office or reach out to us</p>
+
+      <div class="address-item">
+        <div class="address-icon">
+          <img src="assets/icons/map.svg" alt="">
+        </div>
+        <div class="address-content">
+          <h3>Office Address</h3>
+          <address>{{officialInfo.address}}</address>
+        </div>
+      </div>
+
+      <div class="address-item">
+        <div class="address-icon">
+          <img src="assets/icons/phone.svg" alt="">
+        </div>
+        <div class="address-content">
+          <h3>Phone</h3>
+          <p>
+            <a href="tel:+919876543210">{{officialInfo.phone1}}</a><br>
+            <a href="tel:+919876543211">{{officialInfo.phone2}}</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="address-item">
+        <div class="address-icon">
+          <img src="assets/icons/at.svg" alt="">
+        </div>
+        <div class="address-content">
+          <h3>Email</h3>
+          <p>
+            <a href="mailto:{{officialInfo.officialEmail}}">{{officialInfo.officialEmail}}</a><br>
+            <a href="mailto:{{officialInfo.privacyEmail}}">{{officialInfo.privacyEmail}}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

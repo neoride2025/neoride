@@ -1,0 +1,33 @@
+<div class="overlay" id="overlay" onclick="closePopup(event)">
+    <div class="popup" onclick="event.stopPropagation()">
+        <button class="close-btn" onclick="closePopup()">&times;</button>
+
+        <div class="popup-header">
+            <h2>Download Our App</h2>
+            <p>Choose your platform to get the QR code</p>
+        </div>
+
+        <div class="store-selection" id="storeSelection">
+            <button class="store-btn" onclick="selectStore('appstore')">
+                <div class="store-icon">🍎</div>
+                <span>App Store</span>
+            </button>
+            <button class="store-btn" onclick="selectStore('playstore')">
+                <div class="store-icon">▶️</div>
+                <span>Play Store</span>
+            </button>
+        </div>
+
+        <div class="qr-container" id="qrContainer">
+            <div class="qr-box">
+                <div class="qr-placeholder" id="qrCode">📱</div>
+            </div>
+            <div class="qr-info">
+                <h3 id="storeName">App Store</h3>
+                <p>Scan this QR code with your phone camera to download the app</p>
+                <div class="app-url" id="appUrl"></div>
+            </div>
+            <button class="back-btn" onclick="goBack()">← Choose Another Platform</button>
+        </div>
+    </div>
+</div>
