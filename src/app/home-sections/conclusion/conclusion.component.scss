@@ -1,0 +1,41 @@
+/* ===========================================
+  CTA
+  SECTION
+  ============================================
+  */
+.cta-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(20, 184, 166, 0.05) 100%);
+  color: var(--color-text-main);
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+}
+
+.cta-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+}
+
+.cta-section .btn-primary-cta {
+  background: var(--color-primary);
+  color: var(--color-pure-white);
+}
+
+.cta-section .btn-primary-cta:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+
+.info-image {
+    width: 100%;
+    border-radius: 16px;
+    /* box-shadow: 0 8px 24px var(--shadow-md); */
+}

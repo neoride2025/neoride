@@ -1,0 +1,156 @@
+<app-header></app-header>
+<div class="main-page-content container" [ngClass]="{'py-2': deviceType === 'mobile' || deviceType === 'tablet'}">
+    <div class="pt-2 privacy-policy-header-content w-100">
+        <div>
+            <h1 id="policy-title">Privacy Policy</h1>
+            <div class="meta">Effective date: <strong>01 Dec, 2025</strong></div>
+            <div class="small">Last updated: <strong>01 Dec, 2025</strong></div>
+        </div>
+        <!-- <nav class="toc">
+            <a *ngFor="let section of config.privacyPolicySections" (click)="goToSection(section.sectionId)">{{section.name}}</a>
+        </nav> -->
+    </div>
+    <article class="privacy-policy-main-content">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Welcome to <strong>{{officialInfo.companyName}}</strong> ("we", "us", or "our"). We respect your privacy
+                and are
+                committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose,
+                and safeguard your information when you visit our website or use our services.
+            </p>
+        </section>
+
+        <section id="what-we-collect">
+            <h2>Information we collect</h2>
+
+            <p>We may collect and process the following types of information:</p>
+            <ul>
+                <li><strong>Personal Identifiers:</strong> name, email address, phone number, billing/shipping address.
+                </li>
+                <li><strong>Account Data:</strong> username, hashed password, profile preferences, subscription details.
+                </li>
+                <li><strong>Transactional Data:</strong> purchase history, invoices, payment method metadata (we do not
+                    store full payment card numbers).</li>
+                <li><strong>Technical & Usage Data:</strong> IP address, browser type, device identifiers, operating
+                    system, analytics, pages visited, and interaction data.</li>
+                <li><strong>Communications:</strong> correspondence, support requests, and feedback.</li>
+            </ul>
+        </section>
+
+        <section id="how-we-use">
+            <h2>How we use your information</h2>
+            <p>We use information for purposes including (but not limited to):</p>
+            <ul>
+                <li>Providing, personalizing, and improving our services.</li>
+                <li>Processing transactions and sending related communications.</li>
+                <li>Responding to inquiries and providing customer support.</li>
+                <li>Security, fraud prevention, and abuse detection.</li>
+                <li>Marketing (with your consent where required) and sending promotional communications which you may
+                    opt out from.</li>
+                <li>Complying with legal obligations, audits, and dispute resolution.</li>
+            </ul>
+        </section>
+
+        <section id="lawful-basis">
+            <h2>Lawful basis for processing (where applicable)</h2>
+            <p class="small">
+                For users in the European Economic Area (EEA), we process personal data where we have a lawful basis —
+                for example: to perform a contract, to comply with legal obligations, with your consent, or where we
+                have a legitimate interest (balanced against your rights).
+            </p>
+        </section>
+
+        <section id="cookies">
+            <h2>Cookies & similar technologies</h2>
+            <p>We and our partners use cookies, web beacons, and similar technologies to provide, protect and improve
+                our services. Cookies help with authentication, site preferences, analytics, and advertising.</p>
+            <p class="small">You can manage cookie settings through your browser or our cookie preferences tool (if
+                available). Blocking certain cookies may impact website functionality.</p>
+        </section>
+
+        <section id="third-parties">
+            <h2>Third-party services</h2>
+            <p>
+                We may share information with third-party service providers who perform services on our behalf (payment
+                processors, analytics providers, hosting providers, customer support platforms). These providers act as
+                processors and are bound by contract to protect your data.
+            </p>
+            <div class="highlight">
+                <strong>Examples:</strong> Payment processors (Stripe, PayPal), analytics (Google Analytics / similar),
+                email delivery (SendGrid / similar). Replace with the specific providers you use.
+            </div>
+        </section>
+
+        <section id="data-retention">
+            <h2>Data retention</h2>
+            <p>We retain your personal data only as long as necessary to provide services, comply with our legal
+                obligations, resolve disputes, and enforce our agreements. Retention periods depend on the nature of the
+                data and the reason for processing.</p>
+        </section>
+
+        <section id="your-rights">
+            <h2>Your rights</h2>
+            <p>Depending on your jurisdiction, you may have rights such as:</p>
+            <ul>
+                <li>Accessing the personal data we hold about you.</li>
+                <li>Requesting correction or deletion of your personal data.</li>
+                <li>Objecting to or restricting processing.</li>
+                <li>Requesting portability of your data.</li>
+                <li>Withdrawing consent where processing is based on consent.</li>
+            </ul>
+            <p>To exercise your rights or for requests related to privacy, contact us at the address below. We may ask
+                for verification before fulfilling requests.</p>
+        </section>
+
+        <section id="security">
+            <h2>Security</h2>
+            <p>We implement reasonable technical and organizational measures designed to protect your personal
+                information from unauthorized access, disclosure, alteration, and destruction. However, no internet
+                transmission is completely secure — please use caution and contact us if you suspect any unauthorized
+                access to your account.</p>
+        </section>
+
+        <section id="cross-border">
+            <h2>International transfer</h2>
+            <p>Our services may be hosted in multiple countries. When we transfer personal data across borders, we take
+                steps to ensure appropriate safeguards are in place such as standard contractual clauses, approved
+                frameworks, or other lawful transfer mechanisms.</p>
+        </section>
+
+        <section id="children">
+            <h2>Children's privacy</h2>
+            <p>Our services are not intended for children under the age of 13 (or a higher age where required by local
+                law). We do not knowingly collect personal information from children without parental consent. If you
+                believe we have collected such information, contact us to request deletion.</p>
+        </section>
+
+        <section id="california">
+            <h2>California privacy rights (CCPA/CPRA)</h2>
+            <p>If you are a California resident, you may have additional rights under the California Consumer Privacy
+                Act (CCPA) including the right to request access to and deletion of certain personal information. To
+                exercise these rights, please contact us at the address below. We will verify requests as required by
+                law.</p>
+        </section>
+
+        <section id="changes">
+            <h2>Changes to this policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will post the revised policy on this page and
+                update the "Last updated" date. For material changes, we may provide additional notice (for example, by
+                email).</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact us</h2>
+            <p>If you have questions, requests, or concerns about this Privacy Policy, please contact:</p>
+            <ul>
+                <li>Company: <strong>{{officialInfo.companyName}}</strong></li>
+                <li>Email: <a href="mailto:{{officialInfo.privacyEmail}}.com">
+                        <strong>{{officialInfo.privacyEmail}}</strong></a>
+                </li>
+                <li>Address:<strong> {{officialInfo.address}}</strong></li>
+            </ul>
+        </section>
+    </article>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,146 @@
+<app-header></app-header>
+<div class="main-page-content container" [ngClass]="{'py-2': deviceType === 'mobile' || deviceType === 'tablet'}">
+    <div>
+        <h1 id="tos-title">Terms of Service</h1>
+        <div class="meta">Effective date: <strong>01 Dec, 2025</strong></div>
+        <div class="small">Last updated: <strong>01 Dec, 2025</strong></div>
+    </div>
+    <article>
+
+        <section id="agreement">
+            <h2>Agreement to Terms</h2>
+            <p>
+                By accessing or using the services provided by <strong>{{officialInfo.companyName}}</strong> ("we", "us", "our"),
+                you agree to abide by these Terms of Service ("Terms").
+                If you do not agree, you may not use our website or services.
+            </p>
+        </section>
+
+        <section id="eligibility">
+            <h2>Eligibility</h2>
+            <p>You must be at least 13 years of age (or the minimum legal age in your region) to use our services. By
+                using our platform, you represent that you meet this requirement.</p>
+        </section>
+
+        <section id="accounts">
+            <h2>User Accounts</h2>
+            <p>When you create an account, you agree to:</p>
+            <ul>
+                <li>Provide accurate and complete information</li>
+                <li>Keep your login credentials confidential</li>
+                <li>Notify us immediately of unauthorized access</li>
+            </ul>
+            <p>You are responsible for all activities conducted under your account.</p>
+        </section>
+
+        <section id="usage-rules">
+            <h2>Acceptable Use</h2>
+            <p>You agree not to engage in prohibited activities such as:</p>
+            <ul>
+                <li>Copying, modifying, or distributing content without permission</li>
+                <li>Reverse-engineering or attempting to exploit the platform</li>
+                <li>Using the service for illegal, fraudulent, or harmful purposes</li>
+                <li>Uploading malicious code or violating system security</li>
+            </ul>
+        </section>
+
+        <section id="payments">
+            <h2>Payments & Subscriptions</h2>
+            <p>For paid services or subscriptions:</p>
+            <ul>
+                <li>You authorize us or our payment processors to charge your payment method</li>
+                <li>Fees are non-refundable except where required by law or specified by us</li>
+                <li>Subscription plans automatically renew unless canceled</li>
+            </ul>
+            <p class="highlight">Replace this section with your exact billing/refund policy.</p>
+        </section>
+
+        <section id="content">
+            <h2>User-Generated Content</h2>
+            <p>
+                By submitting content (text, images, files, etc.) to our service, you grant us a worldwide,
+                non-exclusive, royalty-free license to host, display, and distribute that content as necessary for
+                providing the service.
+            </p>
+            <p>You are responsible for ensuring your content does not violate third-party rights or applicable laws.</p>
+        </section>
+
+        <section id="intellectual">
+            <h2>Intellectual Property</h2>
+            <p>
+                All trademarks, designs, code, content, and materials are owned by or licensed to <strong>{{officialInfo.companyName}}</strong>.
+                You may not copy, distribute, or create derivative works without written permission.
+            </p>
+        </section>
+
+        <section id="third-parties">
+            <h2>Third-Party Links & Services</h2>
+            <p>
+                Our site may contain links or integrations to third-party services. We are not responsible for the
+                content, practices, or policies of third-party sites.
+                Use them at your own risk.
+            </p>
+        </section>
+
+        <section id="termination">
+            <h2>Termination</h2>
+            <p>We may suspend or terminate your access if you violate these Terms or engage in harmful behavior. Upon
+                termination, your rights to use the service end immediately.</p>
+        </section>
+
+        <section id="disclaimer">
+            <h2>Disclaimer of Warranties</h2>
+            <p>
+                Our services are provided on an “as-is” and “as-available” basis without warranties of any kind.
+                We do not guarantee uninterrupted or error-free operation.
+            </p>
+        </section>
+
+        <section id="liability">
+            <h2>Limitation of Liability</h2>
+            <p>
+                To the maximum extent permitted by law, <strong>{{officialInfo.companyName}}</strong> shall not be liable for
+                indirect, incidental, consequential, or punitive damages.
+            </p>
+            <p>This includes but is not limited to loss of data, profits, or service interruption.</p>
+        </section>
+
+        <section id="indemnification">
+            <h2>Indemnification</h2>
+            <p>
+                You agree to defend, indemnify, and hold harmless <strong>{{officialInfo.companyName}}</strong> and its
+                affiliates from any claims, damages, liabilities, and expenses arising out of your use of the service or
+                violation of these Terms.
+            </p>
+        </section>
+
+        <section id="governing-law">
+            <h2>Governing Law</h2>
+            <p>These Terms shall be governed by the laws of <strong>Bangalore, India</strong>, without regard to
+                conflict-of-law principles.</p>
+        </section>
+
+        <section id="changes">
+            <h2>Changes to Terms</h2>
+            <p>
+                We may modify these Terms at any time. The updated version will be posted on this page with a revised
+                “Last updated” date.
+                Continued use of the service indicates acceptance of the changes.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact us</h2>
+            <p>If you have questions, requests, or concerns about this Privacy Policy, please contact:</p>
+            <ul>
+                <li>Company: <strong>{{officialInfo.companyName}}</strong></li>
+                <li>Email: <a href="mailto:{{officialInfo.privacyEmail}}.com">
+                        <strong>{{officialInfo.privacyEmail}}</strong></a>
+                </li>
+                <li>Address:<strong> {{officialInfo.address}}</strong></li>
+            </ul>
+        </section>
+
+    </article>
+</div>
+<app-footer></app-footer>
