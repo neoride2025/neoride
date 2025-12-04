@@ -11,7 +11,9 @@
       <!-- Navigation Menu -->
       <ul class="nav-menu d-flex" [ngClass]="{'ps-5': deviceType === 'desktop'}">
         <li *ngFor="let menu of menuItems">
-          <a (click)="goTo(menu.path)" class="pointer" [ngClass]="{'active': menu.active}">{{menu.name}}</a>
+          <a (click)="goTo(menu.path)" class="pointer" [ngClass]="{'active': menu.active}">{{menu.name}}
+            <div class="indicator position-absolute" [ngStyle]="scrollPosition > config.changeHeaderBackgroundAt ? {'background': 'var(--color-pure-white)'} : {'background': 'var(--color-primary)'}"></div>
+          </a>
         </li>
       </ul>
 

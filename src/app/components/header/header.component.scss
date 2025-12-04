@@ -45,21 +45,18 @@ header {
   position: relative;
 }
 
-.nav-menu a::after {
-  content: "";
-  position: absolute;
+.nav-menu a .indicator {
   bottom: -5px;
   left: 0;
   width: 0;
   border-radius: 10px;
   height: 2px;
-  background: var(--color-primary);
   transition: width 0.3s ease;
 }
 
-.nav-menu a:hover::after,
-.nav-menu a:focus::after,
-.nav-menu a.active::after {
+.nav-menu a:hover .indicator,
+.nav-menu a:focus .indicator,
+.nav-menu a.active .indicator {
   width: 100%;
 }
 
