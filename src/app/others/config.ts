@@ -1,10 +1,10 @@
 export class Config {
   headerMenuOptions: any = [
-    {
-      name: 'About Us',
-      path: 'about-us',
-      active: false
-    },
+    // {
+    //   name: 'About Us',
+    //   path: 'about-us',
+    //   active: false
+    // },
     // {
     //   name: 'Blogs',
     //   path: 'blogs',
@@ -17,26 +17,37 @@ export class Config {
     }
   ];
   changeHeaderBackgroundAt = 10;
-  privacyPolicySections: any = [
-    { name: 'Introduction', sectionId: 'introduction' },
-    { name: 'What we collect', sectionId: 'what-we-collect' },
-    { name: 'How we use', sectionId: 'how-we-use' },
-    { name: 'Cookies', sectionId: 'cookies' },
-    { name: 'Data retention', sectionId: 'data-retention' },
-    { name: 'Your rights', sectionId: 'your-rights' },
-    { name: 'Security', sectionId: 'security' },
-    { name: 'Children', sectionId: 'children' },
-    { name: 'Contact', sectionId: 'contact' }
+  providers: any[] = [
+    {
+      // name: 'Rapido',
+      // img: 'assets/images/rapido.svg',
+      // alt: 'Rapido'
+    },
+    {
+      // name: 'Uber',
+      // img: 'assets/images/uber.svg',
+      // alt: 'Uber'
+    },
+    {
+    //   name: 'Ola',
+    //   img: 'assets/images/ola.svg',
+    //   alt: 'Ola'
+    },
+    {
+      // name: 'Namma Yatri',
+      // img: 'assets/images/nammayatri.svg',
+      // alt: 'Namma Yatri'
+    }
   ]
   footerMenuOptions: any = [
     {
       title: 'Quick Links',
       links: [
-        {
-          name: 'About Us',
-          path: 'about-us',
-          active: false
-        },
+        // {
+        //   name: 'About Us',
+        //   path: 'about-us',
+        //   active: false
+        // },
         // {
         //   name: 'Blogs',
         //   path: 'blogs',
