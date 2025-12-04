@@ -7,7 +7,7 @@
           <h1>
             Compare Fares,
             <br />
-            <strong>Choose Smarter <span class="brand">NeoRide</span></strong>
+            <strong>Choose Smarter <span class="brand">neoride</span></strong>
           </h1>
           <p class="sub">Save time and money with instant fare comparison across all providers</p>
           <button class="btn-primary-cta">Download App Now</button>
@@ -16,21 +16,9 @@
           <div class="providers-showcase mt-4" role="region" aria-label="Supported ride providers">
             <p class="providers-label">We compare fares from:</p>
             <div class="providers-animation-container">
-              <div class="provider-icon p-1 rounded-2" data-provider="rapido">
-                <img src="assets/images/rapido.svg" alt="Rapido">
-                <div class="best-badge" aria-label="Best fare">★</div>
-              </div>
-              <div class="provider-icon p-1 rounded-2" data-provider="uber">
-                <img src="assets/images/uber.svg" alt="Uber">
-                <div class="best-badge" aria-label="Best fare">★</div>
-              </div>
-              <div class="provider-icon p-1 rounded-2" data-provider="ola">
-                <img src="assets/images/ola.svg" alt="Ola">
-                <div class="best-badge" aria-label="Best fare">★</div>
-              </div>
-              <div class="provider-icon p-1 rounded-2" data-provider="namma">
-                <img src="assets/images/nammayatri.svg" alt="Namma Yatri">
-                <div class="best-badge" aria-label="Best fare">★</div>
+              <div *ngFor="let provider of config.providers" class="provider-icon p-1 rounded-2">
+                <!-- <img [src]="provider.img" [alt]="provider.alt"> -->
+                <div class="best-badge">★</div>
               </div>
             </div>
           </div>

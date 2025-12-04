@@ -1,6 +1,6 @@
 export class OfficialInfo {
 
-    companyName = 'NeoRide';
+    companyName = 'neoride';
     companyUrl = 'https://neoride.in/';
     officialEmail = 'info@neoride.in';
     privacyEmail = 'privacy@neoride.in';
