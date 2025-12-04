@@ -73,3 +73,11 @@ a {
 .main-page-content {
   margin-top: var(--header-height);
 }
+
+// make the image responsive based on the device & source (extension type will vary based on the network)
+.responsive-img {
+  display: block;    /* avoids inline whitespace issues */
+  width: 100%;       /* scale to container width */
+  height: auto;      /* preserve aspect ratio */
+  object-fit: contain; /* optional; contain preserves full image */
+}

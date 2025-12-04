@@ -26,8 +26,20 @@
       </div>
       <div class="col-lg-6 col-md-12 d-block order-1">
         <div class="hero-visual">
-          <img src="assets/images/hero.png" alt="FareCompare app interface showing fare comparison"
-            class="hero-image">
+          <picture>
+            <source type="image/avif"
+              srcset="assets/images/hero/hero-320.avif 320w, assets/images/hero/hero-480.avif 480w, assets/images/hero/hero-1024.avif 1024w"
+              sizes="(max-width:640px) 100vw, 50vw">
+            <source type="image/webp"
+              srcset="assets/images/hero/hero-320.webp 320w, assets/images/hero/hero-480.webp 480w, assets/images/hero/hero-1024.webp 1024w"
+              sizes="(max-width:640px) 100vw, 50vw">
+            <img src="assets/images/hero/hero-1024.jpg"
+              srcset="assets/images/hero/hero-320.jpg 320w, assets/images/hero/hero-480.jpg 480w, assets/images/hero/hero-1024.jpg 1024w"
+              sizes="(max-width:640px) 100vw, 50vw" alt="FareCompare app interface showing fare comparison" width="1024" height="512"
+              class="responsive-img img--blur-up" loading="lazy" data-lqip="data:image/jpeg;base64,..." />
+          </picture>
+          <!-- <img src="assets/images/hero.png" alt="FareCompare app interface showing fare comparison"
+            class="hero-image"> -->
         </div>
       </div>
     </div>

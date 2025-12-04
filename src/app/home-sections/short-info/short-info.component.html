@@ -1,27 +1,41 @@
-  <section class="info-section" id="about-service">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-md-12 order-md-2 order-1 order-lg-1">
-                        <img src="assets/images/about.png"
-                            alt="Person using FareCompare app to compare ride prices" class="info-image">
-                    </div>
-                    <div class="col-lg-7 col-md-12 order-1 order-lg-2">
-                        <div class="info-content">
-                            <h2 class="section-title">Your Smart Ride Companion</h2>
-                            <p class="section-description">
-                                <span class="brand">neoride</span> aggregates real-time pricing from various ride-hailing providers
-                                in seconds. No more switching between apps—get the best fare instantly and book
-                                your ride with confidence. Save up to 40% on every trip while enjoying a seamless
-                                comparison experience designed for Indian commuters.
-                            </p>
-                            <div class="info-stats">
-                                <div class="stat-item" *ngFor="let info of infoStates">
-                                    <div class="stat-number">{{info.number}}</div>
-                                    <div class="stat-label">{{info.label}}</div>
-                                </div>
-                            </div>
+<section class="info-section" id="about-service">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 col-md-12 order-md-2 order-1 order-lg-1">
+                <picture>
+                    <source type="image/avif"
+                        srcset="assets/images/about/about-320.avif 320w, assets/images/about/about-480.avif 480w, assets/images/about/about-1024.avif 1024w"
+                        sizes="(max-width:640px) 100vw, 50vw">
+                    <source type="image/webp"
+                        srcset="assets/images/about/about-320.webp 320w, assets/images/about/about-480.webp 480w, assets/images/about/about-1024.webp 1024w"
+                        sizes="(max-width:640px) 100vw, 50vw">
+                    <img src="assets/images/about/about-1024.jpg"
+                        srcset="assets/images/about/about-320.jpg 320w, assets/images/about/about-480.jpg 480w, assets/images/about/about-1024.jpg 1024w"
+                        sizes="(max-width:640px) 100vw, 50vw" alt="Person using FareCompare app to compare ride prices"
+                        width="1024" height="512" class="responsive-img img--blur-up" loading="lazy"
+                        data-lqip="data:image/jpeg;base64,..." />
+                </picture>
+                <!-- <img src="assets/images/about.png"
+                            alt="Person using FareCompare app to compare ride prices" class="info-image"> -->
+            </div>
+            <div class="col-lg-7 col-md-12 order-1 order-lg-2">
+                <div class="info-content">
+                    <h2 class="section-title">Your Smart Ride Companion</h2>
+                    <p class="section-description">
+                        <span class="brand">neoride</span> aggregates real-time pricing from various ride-hailing
+                        providers
+                        in seconds. No more switching between apps—get the best fare instantly and book
+                        your ride with confidence. Save up to 40% on every trip while enjoying a seamless
+                        comparison experience designed for Indian commuters.
+                    </p>
+                    <div class="info-stats">
+                        <div class="stat-item" *ngFor="let info of infoStates">
+                            <div class="stat-number">{{info.number}}</div>
+                            <div class="stat-label">{{info.label}}</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
